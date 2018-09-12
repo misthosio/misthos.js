@@ -7,5 +7,4 @@ bsb:
 
 test:
 	./node_modules/.bin/jest --clearCache
-	./scripts/start_bitcoind.sh
 	NODE_ENV=test ./node_modules/.bin/jest --env=jsdom --watch
