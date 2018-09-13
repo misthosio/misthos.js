@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fly -t misthos set-pipeline -p misthos-js -c ci/pipeline.yml

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+pushd deps
+make install-deps
+git log --pretty=format:'%h' -n 1 > gitref
+popd
+
+tar -zcvf "bundled-misthos-js-deps-v$(cat deps-version/number)-$(cat deps/gitref).tgz" deps > /dev/null
+
+mv ./*.tgz bundled-deps
