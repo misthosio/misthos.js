@@ -529,7 +529,7 @@ browser-resolve@^1.11.3:
   dependencies:
     resolve "1.1.7"
 
-bs-fetch@^0.3.0:
+bs-fetch@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/bs-fetch/-/bs-fetch-0.3.0.tgz#60c64457359d0c7e0798d5a04db8987d16c4f8f3"
 
