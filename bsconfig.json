@@ -15,7 +15,8 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
-    "@glennsl/bs-json"
+    "@glennsl/bs-json",
+    "bs-fetch"
   ],
   "bs-dev-dependencies": [
     "@glennsl/bs-jest"
