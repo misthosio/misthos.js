@@ -7,7 +7,7 @@ var BitcoinjsLib = require("bitcoinjs-lib");
 
 var key = BitcoinjsLib.ECPair.fromWIF("L4mq6KSmWo6VAoMzDvVuSEG5sqWw2CPujQjeHQYWHnzr89CFKHzs");
 
-Jest.testPromise("Can read sharedData", undefined, (function () {
+Jest.testPromise("Can read sharedData from gaia", undefined, (function () {
         return MisthosJs.readSharedData(/* record */[
                       /* ventureId */"a78d4641-b587-4984-a88e-10c57539cd5d",
                       /* username */"misthosio.id",
