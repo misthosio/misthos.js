@@ -6,7 +6,7 @@ let key =
   ECPair.fromWIF("L4mq6KSmWo6VAoMzDvVuSEG5sqWw2CPujQjeHQYWHnzr89CFKHzs");
 
 let () =
-  testPromise("Can read sharedData", () =>
+  testPromise("Can read sharedData from gaia", () =>
     Js.Promise.(
       key
       |> MisthosJs.readSharedData({
