@@ -1,19 +1,3 @@
-[@bs.module "blockstack"] external isUserSignedIn : unit => bool = "";
-
-[@bs.module "blockstack"] external isSignInPending : unit => bool = "";
-
-type userData = {
-  .
-  "username": Js.nullable(string),
-  "appPrivateKey": string,
-};
-
-[@bs.module "blockstack"] [@bs.return nullable]
-external loadUserData : unit => option(userData) = "";
-
-[@bs.module "blockstack"]
-external generateAndStoreTransitKey : unit => string = "";
-
 type authRequest;
 [@bs.module "blockstack"]
 external makeAuthRequest :
