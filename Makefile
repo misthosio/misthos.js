@@ -11,3 +11,7 @@ bsb-once:
 test:
 	./node_modules/.bin/jest --clearCache
 	NODE_ENV=test ./node_modules/.bin/jest --env=jsdom --watch
+
+ci:
+	node_modules/.bin/jest --clearCache
+	NODE_ENV=test CI=true ./node_modules/.bin/jest --env=jsdom --runInBand
