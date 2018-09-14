@@ -22,6 +22,14 @@ if [[ ! -f ${REPO_ROOT}/ci/release_notes.md ]]; then
   exit 1
 fi
 
+# GIT!
+if [[ -z $(git config --global user.email) ]]; then
+        git config --global user.email "bot@misthos.io"
+fi
+if [[ -z $(git config --global user.name) ]]; then
+        git config --global user.name "CI Bot"
+fi
+
 ###############################################################
 
 pushd ${REPO_ROOT}
@@ -38,22 +46,6 @@ popd
 echo "v${VERSION}"                         > ${RELEASE_ROOT}/tag
 echo "${RELEASE_NAME} v${VERSION}"         > ${RELEASE_ROOT}/name
 mv ${REPO_ROOT}/ci/release_notes.md          ${RELEASE_ROOT}/notes.md
-mv ${REPO_ROOT}/pkg                          ${RELEASE_ROOT}/artifacts
-
-
-# GIT!
-if [[ -z $(git config --global user.email) ]]; then
-        git config --global user.email "bot@misthos.io"
-fi
-if [[ -z $(git config --global user.name) ]]; then
-        git config --global user.name "CI Bot"
-fi
-
-(cd ${REPO_ROOT}
-git merge --no-edit ${BRANCH}
-git add -A
-git status
-git commit -m "release v${VERSION}")
 
 # so that future steps in the pipeline can push our changes
 cp -a ${REPO_ROOT} ${REPO_OUT}/git
