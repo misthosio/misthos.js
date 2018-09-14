@@ -25,9 +25,12 @@ fi
 ###############################################################
 
 pushd ${REPO_ROOT}
+set +x
+echo 'Populating .npmrc'
 cat ./.npmrc <<-EOF
 //registry.npmjs.org/:_authToken=${NPM_TOKEN}
 EOF
+set -x
 
 yarn publish --new-version ${VERSION}
 popd
