@@ -86,10 +86,21 @@ jobs:
       inputs:
       - name: pipeline-tasks
       - name: repo
-      - name: build-version
+      - name: release-version
+      outputs:
+      - name: release
+      - name: repo-out
+      params:
+        VERSION_FROM: release-version/number
+        NPM_TOKEN: ((npm-token))
+        REPO_ROOT: repo
+        REPO_OUT: repo-out
+        BRANCH: master
       run:
         path: pipeline-tasks/ci/tasks/release.sh
-  - { put: release-version, params: {bump: final}}
+  - aggregate:
+    - { put: release-version, params: {bump: final}}
+    - { put: repo, params: {rebase: true, repository: repo-out/git }}
 
 resources:
 - name: repo
