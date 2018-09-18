@@ -133,9 +133,9 @@ resources:
 - name: github-release
   type: github-release
   source:
-    user: misthos-bot
-    repository:   delmo¬
-    access_token: ((github-access-token))
+    user: misthosio
+    repository:   misthos-js
+    access_token: ((github-token))
 - name: deps-version
   type: semver
   source:
