@@ -101,6 +101,11 @@ jobs:
       run:
         path: pipeline-tasks/ci/tasks/release.sh
   - aggregate:
+    - put: github-release
+      params:
+        name:   release/name
+        tag:    release/tag
+        body:   release/notes.md
     - { put: release-version, params: {bump: final}}
     - { put: repo, params: {rebase: true, repository: repo-out/git }}
 
@@ -125,12 +130,12 @@ resources:
     bucket: artifact-cache
     json_key: ((gcp-service-account))
     regexp: bundled-misthos-js-deps-v(.*)-.*.tgz
-# - name: misthos-js-build
-#   type: gcs-resource
-#   source:
-#     bucket: artifact-cache
-#     json_key: ((gcp-service-account))
-#     regexp: misthos-js-build-v(.*).tgz
+- name: github-release
+  type: github-release
+  source:
+    user: misthos-bot
+    repository:   delmo¬
+    access_token: ((github-access-token))
 - name: deps-version
   type: semver
   source:
