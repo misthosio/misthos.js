@@ -40,7 +40,7 @@ cat > ./.npmrc <<EOF
 EOF
 set -x
 
-# yarn publish --new-version ${VERSION}
+yarn publish --new-version ${VERSION}
 popd
 
 echo "v${VERSION}"                         > ${RELEASE_ROOT}/tag
