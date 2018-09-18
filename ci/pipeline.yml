@@ -135,7 +135,7 @@ resources:
   source:
     user: misthos-bot
     repository:   delmo¬
-    access_token: ((github-access-token))
+    access_token: ((github-token))
 - name: deps-version
   type: semver
   source:
