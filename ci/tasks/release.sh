@@ -24,10 +24,10 @@ fi
 
 # GIT!
 if [[ -z $(git config --global user.email) ]]; then
-        git config --global user.email "bot@misthos.io"
+  git config --global user.email "bot@misthos.io"
 fi
 if [[ -z $(git config --global user.name) ]]; then
-        git config --global user.name "CI Bot"
+  git config --global user.name "CI Bot"
 fi
 
 ###############################################################
@@ -40,12 +40,17 @@ cat > ./.npmrc <<EOF
 EOF
 set -x
 
-yarn publish --new-version ${VERSION}
+# yarn publish --new-version ${VERSION}
 popd
 
 echo "v${VERSION}"                         > ${RELEASE_ROOT}/tag
 echo "${RELEASE_NAME} v${VERSION}"         > ${RELEASE_ROOT}/name
 mv ${REPO_ROOT}/ci/release_notes.md          ${RELEASE_ROOT}/notes.md
+
+(cd ${REPO_ROOT}
+git add -A
+git status
+git commit --amend -m "release v${VERSION}")
 
 # so that future steps in the pipeline can push our changes
 cp -a ${REPO_ROOT} ${REPO_OUT}/git

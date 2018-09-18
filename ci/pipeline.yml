@@ -96,6 +96,8 @@ jobs:
         REPO_ROOT: repo
         REPO_OUT: repo-out
         BRANCH: master
+        RELEASE_ROOT: release
+        RELEASE_NAME: misthos-js
       run:
         path: pipeline-tasks/ci/tasks/release.sh
   - aggregate:
