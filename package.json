@@ -17,7 +17,7 @@
   "dependencies": {
     "@glennsl/bs-json": "3.0.0",
     "bitcoinjs-lib": "4.0.1",
-    "blockstack": "18.0.4",
+    "blockstack": "19.3.0",
     "bs-fetch": "0.3.0"
   },
   "devDependencies": {
