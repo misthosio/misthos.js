@@ -533,9 +533,9 @@ bs-fetch@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/bs-fetch/-/bs-fetch-0.3.0.tgz#60c64457359d0c7e0798d5a04db8987d16c4f8f3"
 
-bs-platform@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.5.tgz#d4fd9bbdd11765af5b75110a5655065ece05eed6"
+bs-platform@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.2.1.tgz#3f76f6d4f4c7255296375a8104c8be332770b691"
 
 bs58@^4.0.0:
   version "4.0.1"
