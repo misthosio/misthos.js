@@ -529,9 +529,10 @@ browser-resolve@^1.11.3:
   dependencies:
     resolve "1.1.7"
 
-bs-fetch@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/bs-fetch/-/bs-fetch-0.3.0.tgz#60c64457359d0c7e0798d5a04db8987d16c4f8f3"
+bs-fetch@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/bs-fetch/-/bs-fetch-0.6.2.tgz#37d982e9f79b9bc44c23e87ae78ccbee1f869adf"
+  integrity sha512-VXEjp8kY3vHPckaoy3d96Bx0KYjJAPLNISBwfpwMN26K6DtuZYwI2HKhx7zeHBajz1bRArfx7O8OOLcdtujMvg==
 
 bs-platform@4.0.5:
   version "4.0.5"
