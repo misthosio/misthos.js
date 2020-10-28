@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@glennsl/bs-json": "3.0.0",
-    "bitcoinjs-lib": "4.0.1",
+    "bitcoinjs-lib": "5.2.0",
     "blockstack": "18.0.4",
     "bs-fetch": "0.3.0"
   },
